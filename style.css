@@ -1,0 +1,240 @@
+/* tukaj bom opisal kaj naredijo nekatere CSS lastnosti, ki sem jih uporabil:
+    margin: določa zunanji razmik okoli elementa (prostor med elementom in drugimi)
+    padding: določa notranji razmik znotraj elementa (prostor med vsebino in robom)
+    text-align: poravna besedilo znotraj elementa (npr. left, center, right)
+    color: določa barvo besedila
+    background-color: določa barvo ozadja elementa
+    font-size: določa velikost pisave
+    font-family: določa vrsto pisave
+    width: določa širino elementa
+    display: določa tip prikaza elementa (npr. block, flex, inline
+    align-items: vertikalna poravnava (uporablja se z display: flex)
+    justify-content: vodoravna poravnava (uporablja se z display: flex)
+    position: določa pozicioniranje (npr. static, relative, absolute, fixed)
+    top / bottom / left / right: natančna pozicija elementa (če ima position)
+    list-style-position: določa, ali se oznake (pike) nahajajo znotraj ali zunaj seznama
+    border: določa rob okoli elementa
+    border-radius: zaobli robove elementa
+    cursor: spremeni kazalec miške ob prehodu (npr. pointer)
+    transition: omogoča animacijo sprememb (npr. pri hover efektih)
+*/
+
+
+* {/* lastnosti za vse elemente strani*/
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif
+}
+body{/* latnosti celotnega telesa*/
+    background-color: #20D0B8;
+}
+
+hr { /* lastnosti vodoravne crte*/
+    color: #2B4140;
+    height: 5px;
+    background-color: #2B4140;
+    border:none;
+    margin: 10px;
+    margin-left: 15%;
+    margin-right:15%;
+    
+}
+/* oblikovanje posemeznih odstavkov*/
+p {
+    text-align: center;
+    color: #000;
+    font-size: 22px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.p1 {
+    text-align: center;
+    color: #000;
+    padding: 10px;
+    
+}
+
+/* oblikovanje naslovov*/
+h1 {
+    text-align: center;
+    color: #000;
+
+}
+
+/* uredi neurejen seznam, ki je na sredini sirine*/
+ul {
+    color: #000;
+    font-size: 22px;
+    width: 70%;
+    margin: 0 auto;
+    list-style-position: outside;
+    text-align: center;
+    padding-left: 20%;
+}
+
+/* uredi vsako vrstico v senzamu, da se pika ne premika */
+ul li {
+  text-align: left; 
+  margin-bottom: 10px;
+}
+
+/* kako je oblikovana glava na vrhu vsake strani*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 5px;
+    background-color: #20D0B8;
+}
+
+/*navigacijska vrstica na vsaki strani*/
+nav {
+    background: #2B4140;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+nav a{
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: #3d5c5b;
+}
+
+/*noga vsake strani*/
+footer{
+    background: #2B4140;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.slika1 {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  height: auto;
+}
+
+.logo {
+    max-width: 120px;
+    margin-right: 15px;
+}
+
+.naslov {
+    font-size: 24px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.vrstica {
+    max-width: 100%;
+    margin: auto;
+}
+
+.vir {
+    font-size: 12px;
+    color:#000;
+}
+
+/*vse kar je v povezavi z dropdown gre za zavihek znane storitve, ko imamo dropdown meni za izbiro teh storitev*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_gumb {
+    background-color: #2B4140;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  }
+
+  .dropdown_gumb:hover {
+    /* kaj se zgodi z gumbom ko gres s cursorjem nanj*/
+    background-color: #3d5c5b;
+  }
+
+  .dropdown-vsebina {
+    /* kaj pokaze, ko gres s cursorjem cez neko stvar*/
+    position: absolute;
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .dropdown-vsebina a {
+    background-color:#2B4140 ;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-vsebina {
+    display: block;
+  }
+
+  /* use kar je povezano z -odstavek je oblikovanje teksta in slike, ki sta postavljena drug ob drugem*/
+  .odstavek {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .odstavek img {
+    max-width: 400px;
+    border-radius: 0.5rem;
+  }
+
+  .odstavek .besedilo {
+    flex: 1;
+  }
+
+
+  /* oblikovanje tabele na strani kjer primerjam javni in zasebni oblak*/
+  .tabela {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    margin-left: 5%;
+  }
+
+  .tabela th, .tabela td {
+    border: 3px solid black;
+    padding: 0.75rem;
+    vertical-align: top;
+  }
+
+  .tabela th {
+    background-color: #2B4140;
+    text-align: left;
+    color: #FFFFFF;
+  }
+
+  .tabela tr:nth-child(even) { /*vsaka soda vrstica*/
+    background-color: #E0E0E0;
+  }
+
+  .tabela tr:nth-child(odd) { /*vsaka liha vrstica*/
+    background-color: #FFFFFF;
+  }
